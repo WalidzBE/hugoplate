@@ -1,0 +1,15 @@
+backend:
+  name: git-gateway
+  branch: master  # or your default branch
+
+media_folder: "static/uploads"  # where uploaded files go
+public_folder: "/uploads"      # path in the published site
+
+collections:
+  - name: "blog"
+    label: "Blog"
+    folder: "content/blog"
+    create: true
+    fields:
+      - { name: "title", label: "Title", widget: "string" }
+      - { name: "body", label: "Body", widget: "markdown" }
