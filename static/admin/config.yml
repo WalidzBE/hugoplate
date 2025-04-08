@@ -1,5 +1,5 @@
 backend:
-  name: git-gateway
+  name: github
   branch: master  # or your default branch
 
 media_folder: "static/uploads"  # where uploaded files go
