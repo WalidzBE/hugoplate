@@ -1,7 +1,6 @@
 backend:
-  name: github
-  repo: WalidzBE/hugoplate
-  branch: master
+  name: git-gateway
+  branch: main  # or your main branch
   auth_type: implicit
 
 media_folder: "static/images"
