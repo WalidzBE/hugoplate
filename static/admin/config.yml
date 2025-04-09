@@ -3,6 +3,7 @@ backend:
   repo: WalidzBE/hugoplate
   branch: master
   auth_type: implicit
+  base_url: https://hugoplateex1.netlify.app
 
 media_folder: "static/images"
 public_folder: "/images"
