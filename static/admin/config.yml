@@ -1,15 +1,82 @@
 backend:
-  name: github
-  repo: WalidzBE/hugoplate  # or your default branch
+  name: git-gateway
+  branch: main # or your preferred branch
 
-media_folder: "static/uploads"  # where uploaded files go
-public_folder: "/uploads"      # path in the published site
+media_folder: "static/images"
+public_folder: "/images"
 
 collections:
-  - name: "blog"
-    label: "Blog"
-    folder: "content/blog"
-    create: true
+  - name: "about"
+    label: "About"
+    folder: "content/english/about"
+    create: false
+    identifier_field: "title"
     fields:
-      - { name: "title", label: "Title", widget: "string" }
-      - { name: "body", label: "Body", widget: "markdown" }
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Meta Title", name: "meta_title", widget: "string", required: false}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Image", name: "image", widget: "image"}
+      - {label: "Draft", name: "draft", widget: "boolean", default: false}
+
+  - name: "authors"
+    label: "Authors"
+    folder: "content/english/authors"
+    create: true
+    identifier_field: "title"
+    fields:
+      - {label: "Name", name: "title", widget: "string"}
+      - {label: "Email", name: "email", widget: "string"}
+      - {label: "Image", name: "image", widget: "image"}
+      - {label: "Description", name: "description", widget: "text"}
+      - label: "Social Links"
+        name: "social"
+        widget: "list"
+        fields:
+          - {label: "Platform", name: "name", widget: "string"}
+          - {label: "Icon Class", name: "icon", widget: "string"}
+          - {label: "URL", name: "link", widget: "string"}
+
+  - name: "blog"
+    label: "Blog Posts"
+    folder: "content/english/blog"
+    create: true
+    identifier_field: "title"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Meta Title", name: "meta_title", widget: "string", required: false}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Image", name: "image", widget: "image"}
+      - {label: "Categories", name: "categories", widget: "list"}
+      - {label: "Author", name: "author", widget: "string"}
+      - {label: "Tags", name: "tags", widget: "list"}
+      - {label: "Draft", name: "draft", widget: "boolean", default: false}
+
+  - name: "contact"
+    label: "Contact"
+    folder: "content/english/contact"
+    create: false
+    identifier_field: "title"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Meta Title", name: "meta_title", widget: "string", required: false}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Draft", name: "draft", widget: "boolean", default: false}
+
+  - name: "pages"
+    label: "Pages"
+    folder: "content/english/pages"
+    create: true
+    identifier_field: "title"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Content", name: "body", widget: "markdown"}
+
+  - name: "sections"
+    label: "Sections"
+    folder: "content/english/sections"
+    create: true
+    identifier_field: "title"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Content", name: "body", widget: "markdown"}
