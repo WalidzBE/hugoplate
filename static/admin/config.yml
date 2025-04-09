@@ -2,8 +2,8 @@ backend:
   name: github
   repo: WalidzBE/hugoplate
   branch: master
-  client_id: "Ov23li3EfVUJ2gxhqhr7"
-  client_secret: "0e9021a40d720a5d18604f0b47a7059776f6f5d6"
+  auth_type: implicit
+  site_domain: https://hugoplateex1.netlify.app
   base_url: https://hugoplateex1.netlify.app
 
 media_folder: "static/images"
