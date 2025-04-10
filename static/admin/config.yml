@@ -45,16 +45,16 @@ collections:
     create: true
     identifier_field: "title"
     fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Meta Title", name: "meta_title", widget: "string", required: false}
-      - {label: "Description", name: "description", widget: "text"}
-      - {label: "Date", name: "date", widget: "datetime"}
-      - {label: "Image", name: "image", widget: "image"}
-      - {label: "Categories", name: "categories", widget: "list"}
-      - {label: "Author", name: "author", widget: "string"}
-      - {label: "Tags", name: "tags", widget: "list"}
-      - {label: "Draft", name: "draft", widget: "boolean", default: false}
-
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Meta Title", name: "meta_title", widget: "string", required: false }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Image", name: "image", widget: "image", required: false }
+      - { label: "Categories", name: "categories", widget: "list", default: ["Quantum Error Correction"] }
+      - { label: "Author", name: "author", widget: "string", default: "QEC Team" }
+      - { label: "Tags", name: "tags", widget: "list" }
+      - { label: "Draft", name: "draft", widget: "boolean", default: false }
+      - { label: "Body", name: "body", widget: "markdown" }
   - name: "contact"
     label: "Contact"
     folder: "content/english/contact"
