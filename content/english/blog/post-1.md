@@ -3,7 +3,7 @@ title: Correcting quantum errors
 meta_title: ''
 description: this is meta description
 date: 2022-04-04T05:00:00Z
-image: /images/image-placeholder.png
+image: https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Quantum_error_correction_of_bit_flip_using_three_qubits.svg/1024px-Quantum_error_correction_of_bit_flip_using_three_qubits.svg.png
 categories:
   - Quantum Error Correction
 author: QEC Team
@@ -46,7 +46,7 @@ qc.cx(0, 2)
 
 ## Binary Symmetric Channels
 
-A Binary Symmetric Channel (BSC) flips a bit with a certain probability \\( p \\).
+A Binary Symmetric Channel (BSC) flips a bit with a certain probability \\\\( p \\\\).
 
 ### In Qiskit
 
@@ -65,7 +65,7 @@ The quantum version of the repetition code uses entanglement and measurement.
 
 ### Encoding
 
-To encode \\( |0\\rangle \\) as \\( |000\\rangle \\):
+To encode \\\\( |0\\\\rangle \\\\) as \\\\( |000\\\\rangle \\\\):
 
 ```python
 qc = QuantumCircuit(3)
@@ -140,12 +140,12 @@ Continuous errors can be mapped to X, Y, Z (Pauli) errors.
 
 ### Unitary Qubit Errors
 
-A small rotation, e.g. \\( e^{-i \\theta X} \\), can be approximated as a probabilistic X error.
+A small rotation, e.g. \\\\( e^{-i \\\\theta X} \\\\), can be approximated as a probabilistic X error.
 
 ### Arbitrary Qubit Errors
 
-Any error \\( E \\) can be decomposed as:
-\\[ E = \\alpha I + \\beta X + \\gamma Y + \\delta Z \\]
+Any error \\\\( E \\\\) can be decomposed as:
+\\\\[ E = \\\\alpha I + \\\\beta X + \\\\gamma Y + \\\\delta Z \\\\]
 
 ---
 
@@ -157,7 +157,7 @@ Advanced codes like the Steane and surface codes generalize these concepts. Qisk
 
 ## Visual Example
 
-[![3-Qubit Repetition Code](https://upload.wikimedia.org/wikipedia/commons/5/55/Quantum_Repetition_Code_Circuit.png "Title test 1")](https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Quantum_error_correction_of_bit_flip_using_three_qubits.svg/1024px-Quantum_error_correction_of_bit_flip_using_three_qubits.svg.png)
+[![3-Qubit Repetition Code](https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Quantum_error_correction_of_bit_flip_using_three_qubits.svg/1024px-Quantum_error_correction_of_bit_flip_using_three_qubits.svg.png "Title test 1")](https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Quantum_error_correction_of_bit_flip_using_three_qubits.svg/1024px-Quantum_error_correction_of_bit_flip_using_three_qubits.svg.png)
 
 ---
 
